@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.carousel {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    /* Bu kod içerisinde geçtiğimiz fotoların kaybolması için kullanıyoruz */
+     overflow: hidden;
+    /* overflow: hidden CSS'de bir öğenin taşan içeriğini nasıl ele alacağını belirler.Bu özellik, bir öğenin içeriği,
+     öğenin belirtilen boyutlarından daha büyük olduğunda nasıl görüneceğini kontrol etmek için kullanılır. */
+    height: 500px;
+    width: 500px;
+}
+
+.image-container {
+    display: flex;
+    transition: transform 0.3s linear;
+    transform: translateX(0);
+}
+
+img {
+    object-fit: cover;
+    /* CSS object-fit özelliği, bir görsel veya video etiketlerinin kabına 
+    sığdırmak için nasıl yeniden boyutlandırılması gerektiğini belirtmek için kullanılır. */
+    /* cover - Görüntü en boy oranını korur ve verilen boyutu doldurur. Görüntü sığacak şekilde kırpılır */
+    /* https://kodlamavakti.com/css/object-fit/ */
+    width: 500px;
+    height: 500px;
+}

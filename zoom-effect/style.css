@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+#container {
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    /* Sadece zoomladığım yeri göstermesi için */
+}
+
+img {
+    transform-origin: center center;
+    /* CSS transform özelliğini kullanarak öğeleri döndürmek için transform-origin özelliğini kullanabilirsiniz. 
+    Bu özelliği kullanarak dönüşümün etkileşeceği orijinal noktayı belirleyebilirsiniz.
+    transform-origin: center center ifadesi, öğenin merkezine göre döndürmeyi sağlar. 
+    Bu, öğenin tam ortasında döndürme işlemi gerçekleştirecektir. */
+    object-fit: cover;
+    height:100%;
+    width: 100%;
+    
+}

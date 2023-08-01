@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+button {
+    background-color: darkblue;
+    border: none;
+    color: white;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem;
+    /* 1rem 16px eşittir */
+    transition: transform 0.3s ease-in-out;
+    /* Geçiş efektinin hızı ve biçimini ayarlıyor */
+    /* ease-in-out - specifies a transition effect with a slow start and end */
+    
+}
+
+button.active {
+    transform: translateX(-100px);
+}
+
+nav {
+    background-color: darkblue;
+    position: fixed;
+    /* CSS'de "position:fixed" özelliğine sahip etiket,
+    görüntü alanına göre konumlandırılmıştır,
+    yani sayfa kaydırılmış olsa bile her zaman aynı yerde kalır.
+    top, bottom, left ve right gibi özellikler, öğeyi konumlandırmak için kullanılır. */
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    height: 100vh;
+    /* değeri Viewport Height yani görüntü alanı yüksekliğidir.
+    100vh toplam görüntü alanı yüksekliğidir.
+    ve 900px yüksekliğe sahip bir tarayıcıda 1vh = 900/100 = 9px olacaktır.
+    Görüntü alanı yüksekliği değiştikçe bu oranda font-size değeri de artacak ya da azalacaktır. */
+    
+    transform: translateX(100%);
+    /*  Repositions an element horizontally on the 2D plane.
+    Its result is a <transform-function> data type. */
+
+    transition: transform 0.3s ease-in-out;
+    /* Geçiş efektinin hızı ve biçimini ayarlıyor */
+    /* ease-in-out - specifies a transition effect with a slow start and end */
+}
+
+nav.active {
+    transform: translateX(0px);
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 1rem 0;
+}
+
+nav a {
+    color:white;
+    text-decoration: none;
+}

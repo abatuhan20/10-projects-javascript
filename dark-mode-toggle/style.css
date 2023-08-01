@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* Column haline getiriyor başlık ve paragrafı ayırıyor */
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    text-align: center;
+    padding:5rem;
+    transition: background 0.3s linear, color 0.3s linear;
+    /* smooth geçiş için animasyon */
+}
+
+body.dark {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+label {
+    background-color: rebeccapurple;
+    user-select: none;
+    border-radius: 50%;
+    display: inline-block;
+    /* daire olmasını sağlıyo */
+    width: 50px;
+    height: 50px;
+    /* bir öğenin seçilip seçilemeyeceğini belirler (mouse ile) */
+    cursor: pointer;
+    transition: background 0.3s linear, color 0.3s linear;
+    
+    /* smooth geçiş için animasyon */
+    
+}
+
+/* Bu containerı checkboxu web sayfasının sağ üstüne taşımak için yaptık */
+.toggle-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+}
+
+input {
+    visibility: hidden;
+    /* Checkboxun tik kısmını kaldırıyor */
+}
